@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr" class="dark">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SimilarWeb官网入口 - 网站流量查询分析工具</title>
+  <meta name="keywords" content="SimilarWeb, 网站分析, 流量分析, 竞争分析, SEO工具" />
+  <meta name="description" content="SimilarWeb 是一个专业的网站分析工具，提供详细的流量分析、竞争分析和市场趋势洞察。用户可以查看网站的流量来源、关键词排名和受众画像，帮助优化网站运营和SEO策略。">
+
+  <link rel="shortcut icon" href="./files/similarweb.png">
+  <link rel="preload stylesheet" href="./files/style.9b4b7f3f.css" as="style">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#FF4D4F',
+            secondary: '#FF7A45',
+            dark: '#1E1E2E',
+            light: '#F5F5F5',
+            'dark-gray': '#4E4E5E',
+            'light-gray': '#E5E5E5'
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      }
+    }
+  </script>
+  
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+      .text-shadow {
+        text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+      .nav-link {
+        @apply relative text-dark-gray hover:text-primary transition-colors duration-300;
+      }
+      .nav-link::after {
+        @apply content-[''] absolute w-0 h-0.5 bg-primary left-0 -bottom-1 transition-all duration-300;
+      }
+      .nav-link:hover::after {
+        @apply w-full;
+      }
+      .nav-link.active {
+        @apply text-primary font-medium;
+      }
+      .nav-link.active::after {
+        @apply w-full;
+      }
+      .btn-primary {
+        @apply bg-primary hover:bg-primary/90 text-white font-medium py-2 px-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5;
+      }
+      .btn-secondary {
+        @apply bg-white border border-primary text-primary hover:bg-primary/5 font-medium py-2 px-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300;
+      }
+      .feature-card {
+        @apply bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1;
+      }
+      .faq-title {
+        @apply text-[clamp(1.5rem,3vw,2rem)] font-bold text-dark mb-6;
+      }
+      .title {
+        @apply text-xl font-bold text-dark mb-3;
+      }
+      .details {
+        @apply text-dark-gray leading-relaxed;
+      }
+      .entry-card {
+        @apply bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 text-center;
+      }
+      .entry-icon {
+        @apply text-4xl mb-4;
+      }
+      .entry-title {
+        @apply text-lg font-bold mb-2;
+      }
+      .entry-desc {
+        @apply text-dark-gray text-sm mb-4;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <nav id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300 bg-white/90 backdrop-blur-md shadow-sm">
+      <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+        <div class="flex items-center">
+          <span class="text-xl font-bold text-primary">SimilarWeb</span>
+        </div>
+        
+        <div class="hidden md:flex space-x-8">
+          <a href="#home" class="nav-link active">首页</a>
+          <a href="#entries" class="nav-link">入口</a>
+          <a href="#introduction" class="nav-link">介绍</a>
+          <a href="#features" class="nav-link">特点</a>
+        </div>
+        
+        <button id="menu-toggle" class="md:hidden text-dark-gray hover:text-primary focus:outline-none">
+          <i class="fa-solid fa-bars text-2xl"></i>
+        </button>
+      </div>
+      
+      <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-light-gray shadow-md">
+        <div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
+          <a href="#home" class="nav-link py-2 active">首页</a>
+          <a href="#entries" class="nav-link py-2">入口</a>
+          <a href="#introduction" class="nav-link py-2">介绍</a>
+          <a href="#features" class="nav-link py-2">特点</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="Layout" data-v-b2cf3e0b="">
+      <div class="VPContent is-home" id="VPContent" data-v-b2cf3e0b="" data-v-a494bd1d="">
+        <div id="home" class="VPHome pt-24" data-v-a494bd1d="" data-v-d82743a8="">
+          <div class="VPHero has-image VPHomeHero" data-v-d82743a8="" data-v-fd2650d5="">
+            <div class="container" data-v-fd2650d5="">
+              <div class="main" data-v-fd2650d5="">
+                <h1 class="name" data-v-fd2650d5="" style="display: flex; align-items: center; white-space: nowrap;">
+                  <span style="color:#111;">SimilarWeb</span>
+                </h1>
+
+                <p class="text" data-v-fd2650d5="" style="line-height:1.2rem;margin:10px 0;"><span
+                    style="font-size:1.2rem;font-weight:400;"><strong>专业的网站分析工具</strong></span><br /><span
+                    style="font-size:1rem;font-weight:400;">提供详细的流量分析、竞争分析和市场趋势洞察<br>帮助优化网站运营和SEO策略<br><strong>【推荐！！免费版满足基本需求，付费版功能更强大】</strong></span></p>
+
+                <div class="actions" data-v-fd2650d5="">
+                  
+                </div>
+              </div>
+
+              <div class="image" data-v-fd2650d5=""><div class="image-container" data-v-fd2650d5=""><div
+                    class="image-bg" data-v-fd2650d5=""></div><img class="VPImage image-src"
+                    src="./files/similarweb.jpg" alt="SimilarWeb" data-v-6db2186b=""
+                    style="border-radius:15px;background: #fff;padding: 5px;border: 1px solid #eee;"></div></div>
+
+          </div>
+        </div>
+
+        <div id="entries" class="VPFeatures VPHomeFeatures py-12" data-v-d82743a8="" data-v-ba861f23="">
+          <h2 class="faq-title" style="text-align: center; margin-bottom: 20px;">
+          </h2>
+          <div class="container" data-v-ba861f23="">
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6962852649727169"
+     crossorigin="anonymous"></script>
+<!-- 横向广告 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6962852649727169"
+     data-ad-slot="2494439074"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6" data-v-ba861f23="">
+              <div class="item" data-v-ba861f23="">
+                <span class="VPLink VPFeature" data-v-ba861f23="" data-v-837f6cca="" data-v-8f4dc553="">
+                  <article class="entry-card" data-v-837f6cca="">
+                    <h3 class="entry-title" data-v-837f6cca="">官网入口</h3>
+                    <p class="entry-desc" data-v-837f6cca="">满足基本的网站流量分析需求<br>适合初步了解网站情况</p>
+                    <a href="https://www.similarweb.com/zh/" target="_blank" class="btn-primary inline-block">
+                      立即访问
+                    </a>
+                  </article>
+                </span>
+              </div>
+              
+              <div class="item" data-v-ba861f23="">
+                <span class="VPLink VPFeature" data-v-ba861f23="" data-v-837f6cca="" data-v-8f4dc553="">
+                  <article class="entry-card" data-v-837f6cca="">
+                    <h3 class="entry-title" data-v-837f6cca="">电子书/电影/音乐/漫画/游戏下载</h3>
+                    <p class="entry-desc" data-v-837f6cca="">100W+电子书，2000+4K电影，3000+无损音乐，植物大战僵尸红警游戏下载</p>
+                    <a href="https://wangpanziyuan.pages.dev/" target="_blank" class="btn-primary inline-block">
+                      立即下载
+                    </a>
+                  </article>
+                </span>
+              </div>
+
+              <div class="item" data-v-ba861f23="">
+                <span class="VPLink VPFeature" data-v-ba861f23="" data-v-837f6cca="" data-v-8f4dc553="">
+                  <article class="entry-card" data-v-837f6cca="">
+                    <h3 class="entry-title" data-v-837f6cca="">天涯神贴1000篇精华帖</h3>
+                    <p class="entry-desc" data-v-837f6cca="">KK金融财经、股市楼市、经济预测<br>天涯神贴永流传，在线下载</p>
+                    <a href="https://pan.xunlei.com/s/VOSxaOjTVxQzSPYjb5eJ4GuWA1?pwd=gxtm" target="_blank" class="btn-primary inline-block">
+                      访问GitHub
+                    </a>
+                  </article>
+                </span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+<br>
+
+        <div id="introduction" class="VPFeatures VPHomeFeatures" data-v-d82743a8="" data-v-ba861f23="">
+          <h2 class="faq-title" style="text-align: center; font-size: 24px; font-weight: bold; margin-bottom: 20px;">
+           SimilarWeb介绍
+          </h2>
+          <div class="container" data-v-ba861f23="">
+            <div class="items" data-v-ba861f23="" style="margin-bottom: 40px;">
+              <div class="grid-1 item" data-v-ba861f23="">
+                <span class="VPLink VPFeature" data-v-ba861f23="" data-v-837f6cca="" data-v-8f4dc553="">
+                  <article class="box feature-card" data-v-837f6cca="">
+                    <p class="details" data-v-837f6cca="" style="font-size: 16px; line-height: 1.8;">
+                      SimilarWeb是一个专业的网站分析工具，专注于提供网站流量、竞争分析和市场趋势洞察。用户只需输入目标网站的域名，即可获取该网站的访问量、流量来源、关键词排名等详细数据。SimilarWeb的数据覆盖全球，支持多种语言和地区，包括中文市场，能够帮助用户全面了解网站的运营状况和市场表现。
+                    </p>
+                    <p class="details" data-v-837f6cca="" style="font-size: 16px; line-height: 1.8; margin-top: 15px;">
+                      SimilarWeb不仅提供免费版，还提供付费版和Chrome浏览器扩展程序。免费版虽然功能有限，但足以满足基本的网站流量分析需求。付费版则提供了更深入的分析功能，如详细的流量来源分布、用户行为分析、受众画像等，适合需要进行深入市场研究和竞争分析的用户。
+                    </p>
+                  </article>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="features" class="VPFeatures VPHomeFeatures" data-v-d82743a8="" data-v-ba861f23="">
+          <h2 class="faq-title" style="text-align: center; font-size: 24px; font-weight: bold; margin-bottom: 20px;">
+           SimilarWeb功能特点
+          </h2>
+          <div class="container" data-v-ba861f23="">
+            <div class="items" data-v-ba861f23="" style="margin-bottom: 40px;">
+              <div class="grid-1 item" data-v-ba861f23="">
+
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6962852649727169"
+     crossorigin="anonymous"></script>
+<!-- 横向广告 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6962852649727169"
+     data-ad-slot="2494439074"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+           <div class="grid grid-cols-1 md:grid-cols-3 gap-6" data-v-ba861f23="">
+              <div class="item" data-v-ba861f23="">
+                <span class="VPLink VPFeature" data-v-ba861f23="" data-v-837f6cca="" data-v-8f4dc553="">
+                  <article class="entry-card" data-v-837f6cca="">
+                    <h3 class="entry-title" data-v-837f6cca="">全面的流量分析</h3>
+                    <p class="entry-desc" data-v-837f6cca="">SimilarWeb提供详细的网站流量分析，包括流量来源、流量分布、用户行为和受众画像等。用户可以查看目标网站的全球排名、国家排名、各网页的访问量情况，以及自然搜索和付费搜索的关键词。此外，SimilarWeb还能监测网站在电脑端和移动端的流量变化，帮助用户了解不同设备上的用户行为。</p>
+                  </article>
+                </span>
+              </div>
+              
+              <div class="item" data-v-ba861f23="">
+                <span class="VPLink VPFeature" data-v-ba861f23="" data-v-837f6cca="" data-v-8f4dc553="">
+                  <article class="entry-card" data-v-837f6cca="">
+                    <h3 class="entry-title" data-v-837f6cca="">竞争分析与市场洞察</h3>
+                    <p class="entry-desc" data-v-837f6cca="">SimilarWeb是竞争分析的强大工具，用户可以轻松查看竞争对手的流量来源、关键词策略和市场表现。通过比较自己与竞争对手的流量数据，用户可以发现市场机会，调整自己的营销策略。此外，SimilarWeb还提供行业分析功能，帮助用户了解整个行业的趋势和热门关键词。</p>
+                  </article>
+                </span>
+              </div>
+
+              <div class="item" data-v-ba861f23="">
+                <span class="VPLink VPFeature" data-v-ba861f23="" data-v-837f6cca="" data-v-8f4dc553="">
+                  <article class="entry-card" data-v-837f6cca="">
+                    <h3 class="entry-title" data-v-837f6cca="">灵活的使用方式</h3>
+                    <p class="entry-desc" data-v-837f6cca="">SimilarWeb提供多种使用方式，包括网页版、Chrome浏览器扩展程序和API接口。用户可以根据自己的需求选择合适的工具。Chrome扩展程序特别方便，用户在浏览任何网站时，只需点击扩展图标，即可快速获取该网站的流量和关键词数据。</p>
+                  </article>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="VPFooter" data-v-b2cf3e0b="" data-v-f7fc41f4=""><div class="container" data-v-f7fc41f4=""><p class="copyright" data-v-f7fc41f4=""><strong>觉得很不错？那就按住Ctrl+D键组合，把本网站加入你的浏览器收藏夹吧！</strong></p>
+
+    <p class="copyright" data-v-f7fc41f4="">Copyright ©2025 SimilarWeb网站分析工具</p>
+<p class="copyright" data-v-f7fc41f4="">友情链接：<a href="https://www.xxsnav.com/" target="_blank" >XXS导航</a></p>
+         </div></footer>
+
+    </div>
+  </div>
+
+  <script>
+    // 导航栏滚动效果
+    window.addEventListener('scroll', function() {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('shadow-md');
+        navbar.classList.add('py-2');
+        navbar.classList.remove('py-3');
+      } else {
+        navbar.classList.remove('shadow-md');
+        navbar.classList.add('py-3');
+        navbar.classList.remove('py-2');
+      }
+      
+      // 更新导航栏激活状态
+      const sections = document.querySelectorAll('div[id]');
+      const navLinks = document.querySelectorAll('.nav-link');
+      
+      let current = '';
+      
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (pageYOffset >= (sectionTop - 100)) {
+          current = section.getAttribute('id');
+        }
+      });
+      
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+    });
+    
+    // 移动端菜单切换
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+      const mobileMenu = document.getElementById('mobile-menu');
+      mobileMenu.classList.toggle('hidden');
+    });
+    
+    // 平滑滚动
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        // 关闭移动端菜单（如果打开）
+        document.getElementById('mobile-menu').classList.add('hidden');
+        
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
